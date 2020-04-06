@@ -43,6 +43,8 @@ public class Main {
 
         Imprimir();
 
+        System.out.println("\nMayor promedio: " + listaDeAlumnos.get(0).getSalida());
+        System.out.println("\nMenor promedio: " + listaDeAlumnos.get(listaDeAlumnos.size()-1).getSalida());
     }
 
     static LinkedList<Alumno> listaDeAlumnos = new LinkedList<>();
