@@ -26,13 +26,15 @@ public class Profesor extends Persona implements Comparator<Profesor> {
     public  String getSalida(){ return GenerarSalida();}
 
     private String GenerarSalida(){
-        return  this.getApellido() + " " +
+        return  "Apellido: "+
+                this.getApellido() + " " +
+                "Nombre: "+
                 this.getNombre()+ " "+
-                this.getId() + " " +
-                this.getDni() + " " +
-                this.getSexo() + " " +
+                "Edad: "+
                 this.getEdad() + " " +
+                "Legajo: "+
                 this.getLegajo() + " " +
+                "Titulo: "+
                 this.getTitulo() + " " +
                 IdentificarTitulo();
     }

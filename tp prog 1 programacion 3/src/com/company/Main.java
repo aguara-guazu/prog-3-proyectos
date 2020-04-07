@@ -26,36 +26,47 @@ public class Main {
 
         System.out.println("Lista no ordenada: \n");
 
-        Imprimir();
+        Imprimir("Lista Alumnos no ordenada","Lista Profesores no ordenada");
 
 
         Collections.sort(listaDeAlumnos);
         Collections.sort(listaDeProfesores);
 
-        System.out.println("\n Lista ordenada por apellido y nombre: \n ");
+        System.out.println("\nLista ordenada por apellido y nombre:\n ");
 
-        Imprimir();
+        Imprimir("Ejercicio A", "Ejercicio B");
 
-        System.out.println("\n Lista ordenada por promedio y edad del profesor: \n ");
+        System.out.println("\nLista ordenada por promedio y edad del profesor: \n ");
 
         Collections.sort(listaDeAlumnos, new Alumno());
         Collections.sort(listaDeProfesores, new Profesor());
 
-        Imprimir();
+        Imprimir("Ejercicio C", "Ejercicio G");
 
-        System.out.println("\nMayor promedio: " + listaDeAlumnos.get(0).getSalida());
-        System.out.println("\nMenor promedio: " + listaDeAlumnos.get(listaDeAlumnos.size()-1).getSalida());
+        System.out.println("\n ###Ejercicio D### Mayor promedio: " + listaDeAlumnos.get(0).getSalida());
+        System.out.println("\n ###Ejercicio E### Menor promedio: " + listaDeAlumnos.get(listaDeAlumnos.size()-1).getSalida());
+
+        System.out.println("\n###Ejercicio F###\n");
+        for (Profesor p :
+                listaDeProfesores) {
+            if (p.getTitulo() == "Ing. en Sistemas"){
+                System.out.println(p.getSalida());
+            }
+        }
     }
 
     static LinkedList<Alumno> listaDeAlumnos = new LinkedList<>();
     static LinkedList<Profesor> listaDeProfesores = new LinkedList<>();
 
-    private static void Imprimir() {
+    private static void Imprimir(String nroEjercicioAlumno, String nroEjercicioProfesor) {
+        System.out.println("\n###" + nroEjercicioAlumno + "###\n");
         for (Alumno a :
                 listaDeAlumnos) {
             System.out.println(a.getSalida());
         }
-        System.out.println("----------------------------------");
+        System.out.println("\n----------------------------------\n");
+        System.out.println("\n###" + nroEjercicioAlumno + "###\n");
+
         for (Profesor a :
                 listaDeProfesores) {
             System.out.println(a.getSalida());

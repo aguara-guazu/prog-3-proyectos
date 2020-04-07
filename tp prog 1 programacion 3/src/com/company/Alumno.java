@@ -30,14 +30,12 @@ public class Alumno extends Persona implements Comparator<Alumno> {
     public String getSalida(){ return GenerarSalida(); }
 
     private String GenerarSalida(){
-        return this.getApellido() + " " +
+        return
+                "Apellido: "+
+                this.getApellido() + " " +
+                "Nombre: "+
                 this.getNombre()+ " "+
-                this.getId() + " " +
-                this.getDni() + " " +
-                this.getSexo() + " " +
-                this.getEdad() + " " +
-                this.nroLE + " " +
-                this.materiasAprobadas+ " " +
+                "Promedio: "+
                 this.promedio+ " " +
                 IdentificarPromedio();
 
