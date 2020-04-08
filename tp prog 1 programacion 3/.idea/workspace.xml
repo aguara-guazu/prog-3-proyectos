@@ -25,7 +25,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -80,31 +80,35 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="508" y="247" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586041896855" />
-    <state width="1323" height="529" key="GridCell.Tab.0.bottom" timestamp="1586225194512">
+    <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1586225832055">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="529" key="GridCell.Tab.0.bottom/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586225194512" />
-    <state width="1323" height="529" key="GridCell.Tab.0.center" timestamp="1586225194512">
+    <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586225832055" />
+    <state width="1323" height="529" key="GridCell.Tab.0.bottom" timestamp="1586225860018">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="529" key="GridCell.Tab.0.center/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586225194512" />
-    <state width="1323" height="529" key="GridCell.Tab.0.left" timestamp="1586225194511">
+    <state width="1323" height="529" key="GridCell.Tab.0.bottom/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586225860018" />
+    <state width="1323" height="529" key="GridCell.Tab.0.center" timestamp="1586225860017">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="529" key="GridCell.Tab.0.left/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586225194511" />
-    <state width="1323" height="529" key="GridCell.Tab.0.right" timestamp="1586225194512">
+    <state width="1323" height="529" key="GridCell.Tab.0.center/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586225860017" />
+    <state width="1323" height="529" key="GridCell.Tab.0.left" timestamp="1586225860017">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="529" key="GridCell.Tab.0.right/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586225194512" />
-    <state x="184" y="26" key="SettingsEditor" timestamp="1586223938449">
+    <state width="1323" height="529" key="GridCell.Tab.0.left/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586225860017" />
+    <state width="1323" height="529" key="GridCell.Tab.0.right" timestamp="1586225860018">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="184" y="26" key="SettingsEditor/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586223938449" />
-    <state x="384" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1585865803962">
+    <state width="1323" height="529" key="GridCell.Tab.0.right/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586225860018" />
+    <state x="184" y="26" key="SettingsEditor" timestamp="1586225857139">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="184" y="26" key="SettingsEditor/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586225857139" />
+    <state x="384" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1586314120748">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="360" y="195" key="com.intellij.ide.util.TipDialog/0.0.1280.720/1280.0.1218.800@0.0.1280.720" timestamp="1585694688184" />
-    <state x="384" y="208" key="com.intellij.ide.util.TipDialog/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1585865803962" />
+    <state x="384" y="208" key="com.intellij.ide.util.TipDialog/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586314120748" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1586196608984">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

@@ -46,9 +46,17 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="488" y="93" key="#com.intellij.ide.util.MemberChooser" timestamp="1586357663707">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="488" y="93" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586357663707" />
     <state x="184" y="26" key="SettingsEditor" timestamp="1586205162564">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="26" key="SettingsEditor/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586205162564" />
+    <state x="379" y="208" key="com.intellij.ide.util.TipDialog" timestamp="1586348284747">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="379" y="208" key="com.intellij.ide.util.TipDialog/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586348284747" />
   </component>
 </project>
