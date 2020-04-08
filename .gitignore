@@ -113,10 +113,16 @@ fabric.properties
 *.rar
 
 #javaFX sample files
-/sample
+/sample/
+/sample/*
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
 # End of https://www.gitignore.io/api/java,intellij
 					
+tp 2 programacion 3/.idea/workspace.xml
+frp/src/sample/Controller.java
+frp/src/sample/sample.fxml
+frp/src/sample/Main.java
+tp 2 programacion 3/.idea/workspace.xml
