@@ -31,6 +31,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -50,6 +55,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="488" y="93" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586357663707" />
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom" timestamp="1586375741002">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586375741002" />
+    <state width="1323" height="192" key="GridCell.Tab.0.center" timestamp="1586375741001">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586375741001" />
+    <state width="1323" height="192" key="GridCell.Tab.0.left" timestamp="1586375741001">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586375741001" />
+    <state width="1323" height="192" key="GridCell.Tab.0.right" timestamp="1586375741002">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768/1366.0.1218.800@0.0.1366.768" timestamp="1586375741002" />
     <state x="184" y="26" key="SettingsEditor" timestamp="1586205162564">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
