@@ -11,33 +11,33 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F2A679;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F2A679;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ar.frp.controller.MainMenu">
    <top>
-      <MenuBar style="-fx-background-color: #49A695;" BorderPane.alignment="CENTER">
+      <MenuBar id="menu_bar" style="-fx-background-color: #49A695;" BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="Archivo">
+          <Menu id="menu_archivo" fx:id="menu_archivo" mnemonicParsing="false" text="Archivo">
             <items>
               <MenuItem mnemonicParsing="false" text="Close" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Facturas">
+          <Menu id="menu_facturas" fx:id="menu_facturas" mnemonicParsing="false" text="Facturas">
             <items>
               <MenuItem mnemonicParsing="false" text="Delete" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Terceros">
+          <Menu id="menu_terceros" fx:id="menu_terceros" mnemonicParsing="false" text="Terceros">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="item_terceros" mnemonicParsing="false" text="terceros" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="Herramientas">
+            <Menu id="menu_herramientas" fx:id="menu_herramientas" mnemonicParsing="false" text="Herramientas">
                <items>
                   <MenuItem mnemonicParsing="false" text="About" />
                </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Ayuda">
+            <Menu id="menu_ayuda" fx:id="menu_ayuda" mnemonicParsing="false" text="Ayuda">
                <items>
-                  <MenuItem mnemonicParsing="false" text="About" />
+                  <MenuItem fx:id="item_about" mnemonicParsing="false" text="About" />
                </items>
             </Menu>
         </menus>
@@ -52,15 +52,15 @@
    <bottom>
       <HBox prefHeight="33.0" prefWidth="600.0" spacing="5.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" style="-fx-background-color: #F2CD88;" text="Conectar BD" textAlignment="CENTER" textFill="#404040">
+            <Button id="btn_conectarBd" fx:id="btn_conectarBd" mnemonicParsing="false" style="-fx-background-color: #F2CD88;" text="Conectar BD" textAlignment="CENTER" textFill="#404040">
                <font>
                   <Font size="13.0" />
                </font></Button>
-            <Button mnemonicParsing="false" style="-fx-background-color: #F2CD88;" text="Desconectar BD" textAlignment="CENTER" textFill="#404040">
+            <Button id="btn_desconectarBd" fx:id="btn_desconectarBd" mnemonicParsing="false" style="-fx-background-color: #F2CD88;" text="Desconectar BD" textAlignment="CENTER" textFill="#404040">
                <font>
                   <Font size="13.0" />
                </font></Button>
-            <Button layoutX="62.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #F2CD88;" text="Salir" textFill="#404040">
+            <Button id="btn_salir" fx:id="btn_salir" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #F2CD88;" text="Salir" textFill="#404040">
                <font>
                   <Font size="13.0" />
                </font>
