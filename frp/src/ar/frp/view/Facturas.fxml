@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ar.frp.controller.Facturas">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="160.0" prefWidth="921.0" style="-fx-background-color: #FFFF;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="145.0" fitWidth="140.0" opacity="0.3" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@image/utn.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="169.0" layoutY="36.0" text="Universidad Tecnologica Parana">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="241.0" layoutY="70.0" text="Facultad regional Parana">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="169.0" layoutY="106.0" text="Direccion:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="169.0" layoutY="128.0" text="IVA:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="241.0" layoutY="106.0" text="Avda. Alamafuerte 1033 - Parana" />
+                  <Label layoutX="202.0" layoutY="128.0" text="Sujeto Excento" />
+                  <Label layoutX="772.0" layoutY="28.0" text="FACTURA N°" AnchorPane.rightAnchor="81.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="850.0" layoutY="28.0" text="0013-" AnchorPane.rightAnchor="40.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="783.0" layoutY="54.0" text="Fecha:" AnchorPane.rightAnchor="107.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btn_imprimirFactura" style="-fx-background-color: #106fa8;" text="Imprimir Factura" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="115.0" />
+                  <JFXButton fx:id="btn_cancelarFactura" style="-fx-background-color: #F2A679;" text="Cancelar factura" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="5.0" />
+                  <Separator layoutX="670.0" orientation="VERTICAL" prefHeight="160.0" prefWidth="32.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="219.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <TableView fx:id="tableview_detalles" prefHeight="241.0" prefWidth="901.0" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="150.0">
+                    <columns>
+                      <TableColumn fx:id="col_cantidad" prefWidth="75.0" text="Cantidad" />
+                      <TableColumn fx:id="col_detalle" prefWidth="75.0" text="Detalle" />
+                        <TableColumn fx:id="col_monto" prefWidth="75.0" text="Monto" />
+                    </columns>
+                  </TableView>
+                  <JFXComboBox fx:id="combobox_tercero" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="270.0" promptText="Seleccione un tercero" />
+                  <JFXTextField fx:id="tb_cuitCuil" layoutX="287.0" layoutY="10.0" prefHeight="25.0" prefWidth="350.0" promptText="CUIT/CUIL" />
+                  <JFXComboBox fx:id="combobox_iva" layoutX="645.0" layoutY="10.0" prefHeight="25.0" prefWidth="264.0" promptText="Situacion IVA" AnchorPane.rightAnchor="10.0" />
+                  <JFXComboBox fx:id="combobox_provincia" layoutX="645.0" layoutY="50.0" prefHeight="25.0" prefWidth="264.0" promptText="Provincia" />
+                  <JFXTextField fx:id="tb_localidad" layoutX="286.0" layoutY="50.0" prefHeight="25.0" prefWidth="350.0" promptText="Localidad" />
+                  <JFXTextField fx:id="tb_domicilio" layoutX="10.0" layoutY="50.0" prefWidth="270.0" promptText="Domicilio" />
+                  <JFXButton fx:id="btn_eliminarItem" layoutX="821.0" layoutY="100.0" prefHeight="37.0" prefWidth="90.0" style="-fx-background-color: #F2A679;" text="Eliminar Item" textFill="#fffdfd" />
+                  <JFXButton fx:id="btn_agregarItem" layoutX="721.0" layoutY="100.0" prefHeight="37.0" prefWidth="90.0" style="-fx-background-color: #106fa8;" text="Agregar Item" textFill="WHITE" />
+                  <Label layoutX="12.0" layoutY="83.0" text="Cantidad">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tb_cantidad" layoutX="10.0" layoutY="100.0" prefHeight="25.0" prefWidth="70.0" />
+                  <Label layoutX="88.0" layoutY="83.0" prefHeight="17.0" prefWidth="50.0" text="Detalle">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="tb_detalle" layoutX="88.0" layoutY="100.0" prefHeight="37.0" prefWidth="465.0" AnchorPane.rightAnchor="365.0" />
+                  <Label layoutX="562.0" layoutY="83.0" text="Monto">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tb_monto" layoutX="562.0" layoutY="100.0" AnchorPane.rightAnchor="210.0" />
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <HBox alignment="CENTER_LEFT" layoutX="710.0" layoutY="398.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #FFFF; -fx-border-radius: 30;">
+                     <children>
+                        <Label text="Gran Total:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="label_total">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </center>
+         <bottom>
+            <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="921.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="btn_salir" prefHeight="28.0" prefWidth="99.0" style="-fx-background-color: #F2A679;" text="Salir" textFill="#f8f8f8">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" right="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

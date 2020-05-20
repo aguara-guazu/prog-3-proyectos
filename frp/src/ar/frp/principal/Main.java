@@ -17,6 +17,7 @@ public class Main extends Application {
 			Scene scene = new Scene(loader.load());
 			stage.setTitle("Servicios a terceros UTN - frp");
 			stage.setScene(scene);
+			stage.centerOnScreen();
 			stage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
