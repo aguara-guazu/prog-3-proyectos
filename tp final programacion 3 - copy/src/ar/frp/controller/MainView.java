@@ -140,9 +140,7 @@ public class MainView {
             try {
                 gettingStage("../view/About.fxml").show();
             }  catch (NullPointerException e) {
-                System.out.println("el stage a vuelto como null!\nrevisar la pila de excepciones, " +
-                        " si el path del fxml es correcto o si el propio fxml a cargar tiene todos los parametros corectos" +
-                        "\nIE. si la clase controller del componente esta bien escrita o existe");
+                System.out.println(message_error);
             }
         });
         btn_conectarBd.setOnAction(event -> {
