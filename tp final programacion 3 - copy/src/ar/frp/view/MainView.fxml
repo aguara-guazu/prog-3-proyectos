@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F2A679;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ar.frp.controller.MainView">
+   <top>
+      <MenuBar id="menu_bar" style="-fx-background-color: #49A695;" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu id="menu_archivo" fx:id="menu_archivo" mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem fx:id="mitem_DatosFacultad" mnemonicParsing="false" text="Datos facultad regional" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="mitem_salir" mnemonicParsing="false" text="Salir" />
+            </items>
+          </Menu>
+          <Menu id="menu_facturas" fx:id="menu_facturas" mnemonicParsing="false" text="Facturas">
+            <items>
+              <MenuItem fx:id="mitem_crearFactura" mnemonicParsing="false" text="Crear factura" />
+                  <MenuItem fx:id="mitem_buscarFactura" mnemonicParsing="false" text="Buscar factura" />
+            </items>
+          </Menu>
+          <Menu id="menu_terceros" fx:id="menu_pagos" mnemonicParsing="false" text="Pagos">
+            <items>
+              <MenuItem fx:id="mitem_registrarPagos" mnemonicParsing="false" text="Registrar pagos" />
+                  <MenuItem fx:id="mitem_buscarPagos" mnemonicParsing="false" text="Buscar pagos" />
+            </items>
+          </Menu>
+            <Menu id="menu_herramientas" fx:id="menu_terceros" mnemonicParsing="false" text="Terceros">
+               <items>
+                  <MenuItem fx:id="mitem_actualizacion" mnemonicParsing="false" text="Actualizacion" />
+                  <MenuItem fx:id="mitem_cuenta" mnemonicParsing="false" text="Cuenta" />
+               </items>
+            </Menu>
+            <Menu id="menu_ayuda" fx:id="menu_mantenimiento" mnemonicParsing="false" text="Mantenimiento">
+               <items>
+                  <MenuItem fx:id="mitem_backupBd" mnemonicParsing="false" text="Backup BD" />
+                  <MenuItem fx:id="mitem_restaurarBd" mnemonicParsing="false" text="Restaurar BD" />
+               </items>
+            </Menu>
+            <Menu id="menu_ayuda" fx:id="menu_ayuda" mnemonicParsing="false" text="Ayuda">
+               <items>
+                  <MenuItem fx:id="mitem_acercaDe" mnemonicParsing="false" text="Acerca de" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <ImageView fitHeight="284.0" fitWidth="295.0" opacity="0.3" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@image/utn.png" />
+         </image></ImageView>
+   </center>
+   <bottom>
+      <HBox prefHeight="33.0" prefWidth="600.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="btn_conectarBd" fx:id="btn_conectarBd" mnemonicParsing="false" style="-fx-background-color: #F2CD88;" text="Conectar BD" textAlignment="CENTER" textFill="#404040">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <Button id="btn_desconectarBd" fx:id="btn_desconectarBd" mnemonicParsing="false" style="-fx-background-color: #F2CD88;" text="Desconectar BD" textAlignment="CENTER" textFill="#404040">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <Button id="btn_salir" fx:id="btn_salir" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #F2CD88;" text="Salir" textFill="#404040">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="340.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>

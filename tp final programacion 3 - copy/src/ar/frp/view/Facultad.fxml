@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ar.frp.controller.Facultades">
+   <children>
+      <HBox layoutY="486.0" prefHeight="25.0" prefWidth="921.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <SplitPane dividerPositions="0.5" layoutX="14.0" layoutY="14.0" prefHeight="551.0" prefWidth="781.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane prefHeight="624.0" prefWidth="539.0">
+               <children>
+                  <TableView fx:id="tableView_facultad" prefHeight="628.0" prefWidth="532.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="col_sharp" prefWidth="75.0" text="#" />
+                      <TableColumn fx:id="col_facultad" prefWidth="75.0" text="Facultad" />
+                        <TableColumn fx:id="col_direccion" prefWidth="75.0" text="Direccion" />
+                        <TableColumn fx:id="col_cuit" prefWidth="75.0" text="CUIT" />
+                        <TableColumn fx:id="col_suc" prefWidth="75.0" text="Suc" />
+                        <TableColumn fx:id="col_telefono" prefWidth="75.0" text="Telefonos" />
+                        <TableColumn fx:id="col_email" prefWidth="75.0" text="Email" />
+                        <TableColumn fx:id="col_defecto" prefWidth="75.0" text="Defecto" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="624.0" prefWidth="371.0" style="-fx-background-color: White;">
+               <children>
+                  <JFXTextField fx:id="txt_Buscar" labelFloat="true" layoutX="14.0" layoutY="35.0" prefHeight="25.0" prefWidth="242.0" promptText="Buscar Apellido y/o Nombres" />
+                  <JFXButton fx:id="btn_limpiar" layoutX="263.0" layoutY="38.0" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #49A695; -fx-Text-Fill: White;" text="Limpiar" />
+                  <JFXButton fx:id="btn_salir" layoutX="332.0" layoutY="38.0" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: #49A695; -fx-Text-Fill: White;" text="Salir" />
+                  <JFXButton fx:id="btn_buscar" layoutX="14.0" layoutY="71.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #49A695; -fx-Text-Fill: White;" text="Buscar" />
+                  <JFXButton fx:id="btn_buscarTodos" layoutX="106.0" layoutY="71.0" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #49A695; -fx-Text-Fill: White;" text="Buscar todos" />
+                  <JFXButton fx:id="btn_insertar" layoutX="14.0" layoutY="105.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #F2CD88;" text="Insertar" />
+                  <JFXButton fx:id="btn_borrar" layoutX="106.0" layoutY="105.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #F2CD88;" text="Borrar" />
+                  <JFXButton fx:id="btn_modificar" layoutX="198.0" layoutY="105.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #F2CD88;" text="Modificar" />
+                  <JFXButton fx:id="btn_imprimir" layoutX="289.0" layoutY="105.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #F2CD88;" text="Imprimir" />
+                  <Pane layoutX="18.0" layoutY="165.0" prefHeight="449.0" prefWidth="360.0" style="-fx-border-color: #DAF7A6; -fx-background-color: White;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="60.0">
+                     <children>
+                        <JFXTextField fx:id="txt_apellidoyNombres" labelFloat="true" layoutX="11.0" layoutY="14.0" prefHeight="25.0" prefWidth="339.0" promptText="Ingrese el nombre de la facultad">
+                           <padding>
+                              <Insets bottom="10.0" right="10.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txt_cuilCuit" labelFloat="true" layoutX="11.0" layoutY="75.0" prefHeight="25.0" prefWidth="158.0" promptText="Ingrese la direccion">
+                           <padding>
+                              <Insets bottom="10.0" right="10.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txt_direccion" labelFloat="true" layoutX="11.0" layoutY="140.0" prefHeight="25.0" prefWidth="339.0" promptText="Ingrese la CUIT de rectorado">
+                           <padding>
+                              <Insets bottom="10.0" right="10.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txt_localidad" labelFloat="true" layoutX="17.0" layoutY="209.0" prefHeight="25.0" prefWidth="339.0" promptText="Ingrese el">
+                           <padding>
+                              <Insets bottom="10.0" right="10.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txt_telefonos" labelFloat="true" layoutX="14.0" layoutY="289.0" prefHeight="25.0" prefWidth="288.0" promptText="Ingrese los telefonos">
+                           <padding>
+                              <Insets bottom="10.0" right="10.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txt_saldoApertura" labelFloat="true" layoutX="14.0" layoutY="355.0" prefHeight="25.0" prefWidth="184.0" promptText="Ingrese el email principal">
+                           <padding>
+                              <Insets bottom="10.0" right="10.0" />
+                           </padding>
+                        </JFXTextField>
+                        <JFXCheckBox layoutX="11.0" layoutY="417.0" text="Facultad por defecto" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
