@@ -1,7 +1,6 @@
 package ar.frp.controller;
 
 import ar.frp.database.FacultadDAO;
-import ar.frp.database.Results;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
@@ -9,6 +8,7 @@ import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
@@ -125,6 +125,15 @@ public class Facultades {
                 classNotFoundException.printStackTrace();
             }
         });
+        btn_borrar.setOnAction(event -> {
+            try {
+                borrarFacultad();
+            } catch (SQLException sqlException) {
+                sqlException.printStackTrace();
+            } catch (ClassNotFoundException classNotFoundException) {
+                classNotFoundException.printStackTrace();
+            }
+        });
     }
     
     private String idFacultad;
@@ -165,6 +174,38 @@ public class Facultades {
             mostrarDetallesFacultad(null);
             txt_facultad.requestFocus();
         }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+    private void borrarFacultad() throws SQLException, ClassNotFoundException{
+        try {
+            if (idFacultad != null){
+                FacultadDAO.borrarFacultad(idFacultad);
+                indexTabla = tableView_facultad.getSelectionModel().getSelectedIndex();
+                tableView_facultad.getItems().remove(indexTabla);
+            }
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("error sql");
+            alert.setContentText("es necesario seleccionar una facultad para borrarla");
+            alert.showAndWait();
+            throw sqlException;
+        }
+    }
+    private void modificarFaultad()throws SQLException, ClassNotFoundException{
+        try {
+            if (idFacultad != null){
+                FacultadDAO.modificarFacultad();
+                mostrarDetallesFacultad();
+                txt_Buscar.requestFocus();
+            }else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("error sql");
+                alert.setContentText("seleccione una facultad para modificarla");
+                alert.showAndWait();
+            }
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

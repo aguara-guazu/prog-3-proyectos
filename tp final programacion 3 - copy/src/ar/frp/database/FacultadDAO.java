@@ -13,6 +13,12 @@ public class FacultadDAO {
         String tabla = "facultad";
         Results.shipDataTo(tabla, columnas, values);
     }
+    public static void borrarFacultad(String idFacultad) throws SQLException, ClassNotFoundException {
+        Results.deleteDataFrom("facultad", "id_facultad", idFacultad);
+    }
+    public static void modifcarFacultad(String values)throws SQLException, ClassNotFoundException{
+    
+    }
     private static ObservableList<Facultad> buscarFacultades() throws SQLException, ClassNotFoundException{
         try {
             ObservableList<Facultad> listaFacultades;

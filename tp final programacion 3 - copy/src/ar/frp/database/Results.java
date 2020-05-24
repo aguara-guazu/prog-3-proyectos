@@ -37,6 +37,18 @@ public class Results {
             throw e;
         }
     }
+    public static void deleteDataFrom(String table, String idTable, String value) throws SQLException, ClassNotFoundException {
+        try {
+            String deleteStatement = "DELETE FROM " + table + "\n" +
+                    "WHERE " + idTable + " is " + value;
+            
+            DBUtil.dbExecutableUpdate(deleteStatement);
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+            genericAlert("error operacion delete: ", sqlException).showAndWait();
+            throw sqlException;
+        }
+    }
     public static Alert genericAlert(String message, Exception e){
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("error SQL");
