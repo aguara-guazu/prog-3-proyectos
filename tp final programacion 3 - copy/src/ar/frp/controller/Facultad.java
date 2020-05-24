@@ -116,7 +116,7 @@ public class Facultad {
     }
     public BooleanProperty defectoProperty(){
         if (defecto == null){
-            defecto = new SimpleBooleanProperty();
+            defecto = new SimpleBooleanProperty(false);
         }
         return defecto;
     }

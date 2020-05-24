@@ -34,7 +34,7 @@
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="624.0" prefWidth="371.0" style="-fx-background-color: White;">
                <children>
-                  <JFXTextField fx:id="txt_Buscar" labelFloat="true" layoutX="14.0" layoutY="35.0" prefHeight="25.0" prefWidth="242.0" promptText="Buscar Apellido y/o Nombres" />
+                  <JFXTextField fx:id="txt_Buscar" labelFloat="true" layoutX="14.0" layoutY="35.0" prefHeight="25.0" prefWidth="242.0" promptText="Buscar sucursal" />
                   <JFXButton fx:id="btn_limpiar" layoutX="263.0" layoutY="38.0" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #49A695; -fx-Text-Fill: White;" text="Limpiar" />
                   <JFXButton fx:id="btn_salir" layoutX="332.0" layoutY="38.0" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: #49A695; -fx-Text-Fill: White;" text="Salir" />
                   <JFXButton fx:id="btn_buscar" layoutX="14.0" layoutY="71.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #49A695; -fx-Text-Fill: White;" text="Buscar" />
@@ -45,22 +45,22 @@
                   <JFXButton fx:id="btn_imprimir" layoutX="289.0" layoutY="105.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #F2CD88;" text="Imprimir" />
                   <Pane layoutX="18.0" layoutY="165.0" prefHeight="449.0" prefWidth="360.0" style="-fx-border-color: #DAF7A6; -fx-background-color: White;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="60.0">
                      <children>
-                        <JFXTextField fx:id="txt_apellidoyNombres" labelFloat="true" layoutX="11.0" layoutY="14.0" prefHeight="25.0" prefWidth="339.0" promptText="Ingrese el nombre de la facultad">
+                        <JFXTextField fx:id="txt_facultad" labelFloat="true" layoutX="11.0" layoutY="14.0" prefHeight="25.0" prefWidth="339.0" promptText="Ingrese el nombre de la facultad">
                            <padding>
                               <Insets bottom="10.0" right="10.0" />
                            </padding>
                         </JFXTextField>
-                        <JFXTextField fx:id="txt_cuilCuit" labelFloat="true" layoutX="11.0" layoutY="75.0" prefHeight="25.0" prefWidth="158.0" promptText="Ingrese la direccion">
+                        <JFXTextField fx:id="txt_direccion" labelFloat="true" layoutX="11.0" layoutY="75.0" prefHeight="25.0" prefWidth="158.0" promptText="Ingrese la direccion">
                            <padding>
                               <Insets bottom="10.0" right="10.0" />
                            </padding>
                         </JFXTextField>
-                        <JFXTextField fx:id="txt_direccion" labelFloat="true" layoutX="11.0" layoutY="140.0" prefHeight="25.0" prefWidth="339.0" promptText="Ingrese la CUIT de rectorado">
+                        <JFXTextField fx:id="txt_cuit" labelFloat="true" layoutX="11.0" layoutY="140.0" prefHeight="25.0" prefWidth="339.0" promptText="Ingrese la CUIT de rectorado">
                            <padding>
                               <Insets bottom="10.0" right="10.0" />
                            </padding>
                         </JFXTextField>
-                        <JFXTextField fx:id="txt_localidad" labelFloat="true" layoutX="17.0" layoutY="209.0" prefHeight="25.0" prefWidth="339.0" promptText="Ingrese el">
+                        <JFXTextField fx:id="txt_sucursal" labelFloat="true" layoutX="17.0" layoutY="209.0" prefHeight="25.0" prefWidth="339.0" promptText="ingrese la sucursal">
                            <padding>
                               <Insets bottom="10.0" right="10.0" />
                            </padding>
@@ -70,12 +70,12 @@
                               <Insets bottom="10.0" right="10.0" />
                            </padding>
                         </JFXTextField>
-                        <JFXTextField fx:id="txt_saldoApertura" labelFloat="true" layoutX="14.0" layoutY="355.0" prefHeight="25.0" prefWidth="184.0" promptText="Ingrese el email principal">
+                        <JFXTextField fx:id="txt_email" labelFloat="true" layoutX="14.0" layoutY="355.0" prefHeight="25.0" prefWidth="184.0" promptText="Ingrese el email principal">
                            <padding>
                               <Insets bottom="10.0" right="10.0" />
                            </padding>
                         </JFXTextField>
-                        <JFXCheckBox layoutX="11.0" layoutY="417.0" text="Facultad por defecto" />
+                        <JFXCheckBox fx:id="chb_defecto" layoutX="11.0" layoutY="417.0" text="Facultad por defecto" />
                      </children>
                   </Pane>
                </children>

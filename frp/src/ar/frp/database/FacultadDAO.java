@@ -55,7 +55,7 @@ public class FacultadDAO {
                                         String telefonos, String email, Boolean defecto) throws SQLException, ClassNotFoundException {
         //declaracion del insert
         String updateStmt = "INSERT INTO facultad (NOMBRE, DIRECCION, CUIT, SUCURSAL, TELEFONO, EMAIL, DEFECTO)\n"+
-                "VALUES ('" + nombre + "', " + direccion + "', " + cuit + "', " +
+                "VALUES (" + nombre + "', " + direccion + "', " + cuit + "', " +
                 sucursal + "', " + telefonos + "', " + email + "', " + defecto + ")";
         
         //se ejecuta el insert
