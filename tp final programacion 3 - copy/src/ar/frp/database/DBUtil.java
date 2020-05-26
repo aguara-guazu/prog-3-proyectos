@@ -52,14 +52,14 @@ public class DBUtil {
             showAlert("error SQL", "problema en la ejecucion del query", e).showAndWait();
             throw e;
         }
-        finally {
+        /*finally {
             if (resultSet != null){
                 resultSet.close();
             }
             if (statement != null){
                 statement.close();
             }
-        }
+        }*/
         return resultSet;
     } //operaciones DOL sobre la bd
     public  static void dbExecutableUpdate(String sqlStatement) throws SQLException, ClassNotFoundException{

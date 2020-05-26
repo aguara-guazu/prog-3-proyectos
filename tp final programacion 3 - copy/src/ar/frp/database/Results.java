@@ -4,6 +4,8 @@ import javafx.scene.control.Alert;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Results {
     /*
@@ -39,8 +41,8 @@ public class Results {
     }
     public static void deleteDataFrom(String table, String idTable, String value) throws SQLException, ClassNotFoundException {
         try {
-            String deleteStatement = "DELETE FROM " + table + "\n" +
-                    "WHERE " + idTable + " is " + value;
+            String deleteStatement = "DELETE  FROM " + table + "\n" +
+                    "WHERE " + idTable + " = " + value;
             
             DBUtil.dbExecutableUpdate(deleteStatement);
         } catch (SQLException sqlException) {
@@ -49,10 +51,48 @@ public class Results {
             throw sqlException;
         }
     }
+    public static void editDataFrom(String table, String[] columns, String[] values, String idTable, String valueIdToUpdate) throws SQLException, ClassNotFoundException {
+        StringBuilder columsAndValues = new StringBuilder();
+        if (columns.length == values.length){
+            for (int i = 0; i < columns.length; i++) {
+                columsAndValues.append(columns[i] + " = " + "'" + values[i] + "'" + ",\n");
+            }
+            String newColumsAndValues = columsAndValues.substring(0, columsAndValues.lastIndexOf(",")); //remover la ultima coma sobrante antes del where
+            String updateStatement = "UPDATE " + table +
+                                     " SET " + newColumsAndValues +
+                                     " WHERE " + idTable + " = " + valueIdToUpdate;
+            try {
+                DBUtil.dbExecutableUpdate(updateStatement);
+            } catch (SQLException sqlException) {
+                sqlException.printStackTrace();
+                genericAlert("error en el update del elemento : ", sqlException);
+                throw sqlException;
+            }
+        }else {
+            genericAlert("Error.\nni los values ni las columnas tienen la misma cantida de valores!.", null).showAndWait();
+        }
+    }
+    public static ResultSet searchData(String table, String column, String keyword) throws SQLException, ClassNotFoundException{
+        try {
+            
+            String resultStatement = "SELECT * FROM " + table +
+                                    " WHERE " + column + " LIKE " + "'"+ keyword + "'";
+            return DBUtil.dbExecutableQuery(resultStatement);
+            
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+            genericAlert("imposible obtener el/los resultado/s ", sqlException).showAndWait();
+            throw sqlException;
+        }
+    }
     public static Alert genericAlert(String message, Exception e){
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("error SQL");
-        alert.setContentText(message + e);
+        if (e != null) {
+            alert.setContentText(message + e);
+        } else {
+            alert.setContentText(message);
+        }
         return alert;
     }
     

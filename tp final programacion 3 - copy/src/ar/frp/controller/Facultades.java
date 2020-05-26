@@ -134,6 +134,33 @@ public class Facultades {
                 classNotFoundException.printStackTrace();
             }
         });
+        btn_modificar.setOnAction(event -> {
+            try {
+                modificarFaultad();
+            } catch (SQLException sqlException) {
+                sqlException.printStackTrace();
+            } catch (ClassNotFoundException classNotFoundException) {
+                classNotFoundException.printStackTrace();
+            }
+        });
+        btn_buscar.setOnAction(event -> {
+            try {
+                mostrarFacultad(txt_Buscar.getText());
+            } catch (SQLException sqlException) {
+                sqlException.printStackTrace();
+            } catch (ClassNotFoundException classNotFoundException) {
+                classNotFoundException.printStackTrace();
+            }
+        });
+        btn_buscarTodos.setOnAction(event -> {
+            try {
+                mostrarFacultades();
+            } catch (SQLException sqlException) {
+                sqlException.printStackTrace();
+            } catch (ClassNotFoundException classNotFoundException) {
+                classNotFoundException.printStackTrace();
+            }
+        });
     }
     
     private String idFacultad;
@@ -186,27 +213,54 @@ public class Facultades {
             }
         } catch (SQLException sqlException) {
             sqlException.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("error sql");
-            alert.setContentText("es necesario seleccionar una facultad para borrarla");
-            alert.showAndWait();
+            genericAlert("es necesario seleccionar una facultad para borrarla", sqlException).showAndWait();
             throw sqlException;
         }
     }
     private void modificarFaultad()throws SQLException, ClassNotFoundException{
+        if (idFacultad != null){
+            String facultadData = txt_facultad.getText()                      + "," +
+                                  txt_direccion.getText()                     + "," +
+                                  txt_cuit.getText()                          + "," +
+                                  txt_sucursal.getText()                      + "," +
+                                  txt_telefonos.getText()                     + "," +
+                                  txt_email.getText()                         + "," +
+                                  Boolean.parseBoolean(chb_defecto.getText()) + "," +
+                                  idFacultad;
+            FacultadDAO.modifcarFacultad(facultadData, idFacultad);
+            mostrarDetallesFacultad(null);
+            txt_Buscar.requestFocus();
+        }else {
+            genericAlert("seleccione una facultad para modificarla", null).showAndWait();
+        }
+    }
+    private void mostrarFacultad(String cadena) throws SQLException, ClassNotFoundException{
         try {
-            if (idFacultad != null){
-                FacultadDAO.modificarFacultad();
-                mostrarDetallesFacultad();
-                txt_Buscar.requestFocus();
-            }else {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("error sql");
-                alert.setContentText("seleccione una facultad para modificarla");
-                alert.showAndWait();
-            }
+            ObservableList<Facultad> facultadesData = FacultadDAO.buscarFacultad(cadena);
+            populateFacultades(facultadesData);
         } catch (SQLException e) {
             e.printStackTrace();
+            genericAlert("imposible mostrar las facultades con el criterio: ", e).showAndWait();
+            throw e;
         }
+    }
+    private void mostrarFacultades() throws SQLException, ClassNotFoundException{
+        try {
+            ObservableList<Facultad> facultadesData = FacultadDAO.buscarFacultades();
+            populateFacultades(facultadesData);
+        } catch (SQLException sqlException) {
+            sqlException.printStackTrace();
+            genericAlert("imposible mostrar las facultades ", sqlException).showAndWait();
+            throw sqlException;
+        }
+    }
+    private void populateFacultades(ObservableList<Facultad> facultadesData){
+        tableView_facultad.setItems(facultadesData);
+    }
+    private  Alert genericAlert(String message, Exception e){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("error SQL");
+        alert.setContentText(message + e);
+        return alert;
     }
 }
