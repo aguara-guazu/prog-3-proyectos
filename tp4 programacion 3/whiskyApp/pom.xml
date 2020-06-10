@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.whisky</groupId>
-  <artifactId>whiskyApp</artifactId>
+  <groupId>utn.frp.p3</groupId>
+  <artifactId>WhiskyServer</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 
   <properties>
@@ -19,7 +19,7 @@
     <vertx.version>3.9.1</vertx.version>
     <junit-jupiter.version>5.4.0</junit-jupiter.version>
 
-    <main.verticle>com.whisky.whiskyApp.MainVerticle</main.verticle>
+    <main.verticle>utn.frp.p3.WhiskyServer.MainVerticle</main.verticle>
   </properties>
 
   <dependencyManagement>
@@ -38,6 +38,10 @@
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.vertx</groupId>
+      <artifactId>vertx-pg-client</artifactId>
     </dependency>
     <dependency>
       <groupId>io.vertx</groupId>
