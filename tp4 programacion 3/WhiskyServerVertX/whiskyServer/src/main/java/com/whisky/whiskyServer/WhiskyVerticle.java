@@ -1,7 +1,7 @@
-package com.whisky.whiskyApp;
+package com.whisky.whiskyServer;
 
 
-import com.whisky.whiskyApp.managers.WhiskyManager;
+import com.whisky.whiskyServer.managers.WhiskyManager;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;

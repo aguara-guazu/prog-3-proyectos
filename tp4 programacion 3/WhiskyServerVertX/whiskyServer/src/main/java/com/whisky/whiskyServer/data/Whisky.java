@@ -1,4 +1,4 @@
-package com.whisky.whiskyApp.data;
+package com.whisky.whiskyServer.data;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

@@ -1,4 +1,4 @@
-package com.whisky.whiskyApp.managers;
+package com.whisky.whiskyServer.managers;
 
 import io.vertx.core.http.HttpServerResponse;
 import io.vertx.core.json.Json;
@@ -8,8 +8,8 @@ import io.vertx.sqlclient.Row;
 import io.vertx.sqlclient.RowSet;
 import io.vertx.sqlclient.Tuple;
 
-import com.whisky.whiskyApp.data.Whisky;
-import java.net.http.HttpResponse;
+import com.whisky.whiskyServer.data.Whisky;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.whisky.whiskyApp;
+package com.whisky.whiskyServer;
 
 
 import io.vertx.core.Vertx;
